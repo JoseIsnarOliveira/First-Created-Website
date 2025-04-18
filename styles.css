@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5, h6, span{
     line-height: 1.25;
 }
 
+h1{
+    font-size: 36px;
+}
+
 p{
     line-height: 1.5;
     font-size: 16px;
@@ -22,7 +26,16 @@ li{
 }
 
 .text--navyblue {
-    color: navy;
+    color: rgb(58, 58, 194);
+}
+
+section:nth-child(even) { 
+    background-color: #f8f8f8;
+    margin: 70px 0;
+}
+
+.section__title {
+    margin-bottom: 20px;
 }
 
 /* NAVIGATION BAR */
@@ -58,12 +71,12 @@ nav{
 }
 
 .nav__link--anchor-primary:hover {
-    background-color: rgb(50, 50, 135);
+    background-color: rgb(58, 58, 194);
 }
 
 .personal__logo {
     font-size: 24px;
-    color: navy;
+    color: rgb(58, 58, 194);
     margin: 0 12px;
     font-weight: bold;
 }
@@ -90,11 +103,19 @@ nav{
     flex-direction: column;
 }
 
+.about-me__info {
+    display: flex;
+    flex-direction: column;
+
+}
 .about-me__info--container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .about-me__picture {
@@ -110,4 +131,83 @@ nav{
     margin: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
     margin-bottom: 36px;
+}
+
+.about-me__info--title {
+    margin-bottom: 16px;
+}
+
+.about-me__info--para {
+    font-size: 20px;
+    margin-bottom: 28px;
+
+}
+
+.about-me__link {
+    font-size: 20px; 
+    color: #242424;
+    text-decoration: none;
+    padding: 0 16px;
+}
+
+.about-me__img--container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-me__img {
+   width: 100%;
+   max-width: 400px;
+}
+
+/* TECH STACK */
+
+.language__img {
+    width: 100%;
+    max-width: 150px;
+}
+
+.language:hover .language__img {
+    filter: brightness(80%);
+    opacity: 0.86;
+    transform: scale(0.9);
+    transition: all 300ms;
+}
+
+.language {
+    width: 25%;
+    justify-content: center;
+    display: flex;
+    position: relative;
+}
+
+.language__img--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 16px;
+    width: 100%; /* Make the figure responsive */
+    max-width: 150px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the figure */
+    text-align: center; /* Center the content inside */
+}
+
+.language__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Space out the figures */}
+
+.language__name {
+   position: absolute;
+   bottom: 0;
+   transform: scale(0);
+   transition: all 300ms;
+   font-size: 20px;
+   opacity: 0;
+}
+
+.language:hover .language__name {
+   transform: scale(1);
+   opacity: 1;
 }
